@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Control_Tabel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="DeviceID" Type="Int32" />
+    <Property Name="ATemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Aoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Dwind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FModel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HElec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Updatetime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="randomid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Set_Tabel">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+    </Key>
+    <Property Name="DeviceID" Type="Int32" Nullable="false" />
+    <Property Name="DeviceAddress" Type="Int32" Nullable="false" />
+    <Property Name="DevicePort" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status_Tabel">
+    <Key>
+      <PropertyRef Name="DeviceAddress" />
+    </Key>
+    <Property Name="DeviceAddress" Type="Int32" Nullable="false" />
+    <Property Name="ATemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Aoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Dwind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FModel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HElec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Updatetime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Aoctime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="eTemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="StatusWater">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="DeviceAddress" Type="Int32" Nullable="false" />
+    <Property Name="ATemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Aoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Dwind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FModel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HElec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Updatetime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="eTemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Aoctime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="testEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Control_Tabel" EntityType="Self.Control_Tabel" />
+    <EntitySet Name="Set_Tabel" EntityType="Self.Set_Tabel" />
+    <EntitySet Name="Status_Tabel" EntityType="Self.Status_Tabel" />
+    <EntitySet Name="StatusWater" EntityType="Self.StatusWater" />
+  </EntityContainer>
+</Schema>

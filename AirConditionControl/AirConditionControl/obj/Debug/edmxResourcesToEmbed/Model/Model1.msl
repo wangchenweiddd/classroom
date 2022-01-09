@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="testModelStoreContainer" CdmEntityContainer="testEntities">
+    <EntitySetMapping Name="Control_Tabel">
+      <EntityTypeMapping TypeName="testModel.Control_Tabel">
+        <MappingFragment StoreEntitySet="Control_Tabel">
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="ATemp" ColumnName="ATemp" />
+          <ScalarProperty Name="Aoc" ColumnName="Aoc" />
+          <ScalarProperty Name="Dwind" ColumnName="Dwind" />
+          <ScalarProperty Name="FModel" ColumnName="FModel" />
+          <ScalarProperty Name="HElec" ColumnName="HElec" />
+          <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="randomid" ColumnName="randomid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Set_Tabel">
+      <EntityTypeMapping TypeName="testModel.Set_Tabel">
+        <MappingFragment StoreEntitySet="Set_Tabel">
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="DeviceAddress" ColumnName="DeviceAddress" />
+          <ScalarProperty Name="DevicePort" ColumnName="DevicePort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status_Tabel">
+      <EntityTypeMapping TypeName="testModel.Status_Tabel">
+        <MappingFragment StoreEntitySet="Status_Tabel">
+          <ScalarProperty Name="DeviceAddress" ColumnName="DeviceAddress" />
+          <ScalarProperty Name="ATemp" ColumnName="ATemp" />
+          <ScalarProperty Name="Aoc" ColumnName="Aoc" />
+          <ScalarProperty Name="Dwind" ColumnName="Dwind" />
+          <ScalarProperty Name="FModel" ColumnName="FModel" />
+          <ScalarProperty Name="HElec" ColumnName="HElec" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+          <ScalarProperty Name="Aoctime" ColumnName="Aoctime" />
+          <ScalarProperty Name="eTemp" ColumnName="eTemp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusWater">
+      <EntityTypeMapping TypeName="testModel.StatusWater">
+        <MappingFragment StoreEntitySet="StatusWater">
+          <ScalarProperty Name="DeviceAddress" ColumnName="DeviceAddress" />
+          <ScalarProperty Name="ATemp" ColumnName="ATemp" />
+          <ScalarProperty Name="Aoc" ColumnName="Aoc" />
+          <ScalarProperty Name="Dwind" ColumnName="Dwind" />
+          <ScalarProperty Name="FModel" ColumnName="FModel" />
+          <ScalarProperty Name="HElec" ColumnName="HElec" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+          <ScalarProperty Name="eTemp" ColumnName="eTemp" />
+          <ScalarProperty Name="Aoctime" ColumnName="Aoctime" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

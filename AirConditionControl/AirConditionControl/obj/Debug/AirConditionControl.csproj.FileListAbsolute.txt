@@ -1,0 +1,13 @@
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\AirConditionControl.exe.config
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\AirConditionControl.exe
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\AirConditionControl.pdb
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\EntityFramework.dll
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\EntityFramework.SqlServer.dll
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\EntityFramework.xml
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\EntityFramework.SqlServer.xml
+E:\老区空调\AirConditionControl\AirConditionControl\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\老区空调\AirConditionControl\AirConditionControl\obj\Debug\AirConditionControl.csprojResolveAssemblyReference.cache
+E:\老区空调\AirConditionControl\AirConditionControl\obj\Debug\AirConditionControl.Form1.resources
+E:\老区空调\AirConditionControl\AirConditionControl\obj\Debug\AirConditionControl.csproj.GenerateResource.Cache
+E:\老区空调\AirConditionControl\AirConditionControl\obj\Debug\AirConditionControl.exe
+E:\老区空调\AirConditionControl\AirConditionControl\obj\Debug\AirConditionControl.pdb

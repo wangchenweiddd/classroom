@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Control_Tabel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="DeviceID" Type="int" />
+          <Property Name="ATemp" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aoc" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dwind" Type="nvarchar" MaxLength="255" />
+          <Property Name="FModel" Type="nvarchar" MaxLength="255" />
+          <Property Name="HElec" Type="nvarchar" MaxLength="255" />
+          <Property Name="Updatetime" Type="nvarchar" MaxLength="255" />
+          <Property Name="status" Type="nvarchar" MaxLength="255" />
+          <Property Name="randomid" Type="nvarchar(max)" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Set_Tabel">
+          <Key>
+            <PropertyRef Name="DeviceID" />
+          </Key>
+          <Property Name="DeviceID" Type="int" Nullable="false" />
+          <Property Name="DeviceAddress" Type="int" Nullable="false" />
+          <Property Name="DevicePort" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status_Tabel">
+          <Key>
+            <PropertyRef Name="DeviceAddress" />
+          </Key>
+          <Property Name="DeviceAddress" Type="int" Nullable="false" />
+          <Property Name="ATemp" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aoc" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dwind" Type="nvarchar" MaxLength="255" />
+          <Property Name="FModel" Type="nvarchar" MaxLength="255" />
+          <Property Name="HElec" Type="nvarchar" MaxLength="255" />
+          <Property Name="ErrorMessage" Type="nvarchar" MaxLength="255" />
+          <Property Name="Updatetime" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aoctime" Type="nvarchar" MaxLength="255" />
+          <Property Name="eTemp" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="StatusWater">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="DeviceAddress" Type="int" Nullable="false" />
+          <Property Name="ATemp" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aoc" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dwind" Type="nvarchar" MaxLength="255" />
+          <Property Name="FModel" Type="nvarchar" MaxLength="255" />
+          <Property Name="HElec" Type="nvarchar" MaxLength="255" />
+          <Property Name="ErrorMessage" Type="nvarchar" MaxLength="255" />
+          <Property Name="Updatetime" Type="nvarchar" MaxLength="255" />
+          <Property Name="eTemp" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aoctime" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="testModelStoreContainer">
+          <EntitySet Name="Control_Tabel" EntityType="Self.Control_Tabel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Set_Tabel" EntityType="Self.Set_Tabel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status_Tabel" EntityType="Self.Status_Tabel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StatusWater" EntityType="Self.StatusWater" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Control_Tabel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="DeviceID" Type="Int32" />
+          <Property Name="ATemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dwind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FModel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HElec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Updatetime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="randomid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Set_Tabel">
+          <Key>
+            <PropertyRef Name="DeviceID" />
+          </Key>
+          <Property Name="DeviceID" Type="Int32" Nullable="false" />
+          <Property Name="DeviceAddress" Type="Int32" Nullable="false" />
+          <Property Name="DevicePort" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status_Tabel">
+          <Key>
+            <PropertyRef Name="DeviceAddress" />
+          </Key>
+          <Property Name="DeviceAddress" Type="Int32" Nullable="false" />
+          <Property Name="ATemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dwind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FModel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HElec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Updatetime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aoctime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="eTemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StatusWater">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="DeviceAddress" Type="Int32" Nullable="false" />
+          <Property Name="ATemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dwind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FModel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HElec" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Updatetime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="eTemp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aoctime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="testEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Control_Tabel" EntityType="Self.Control_Tabel" />
+          <EntitySet Name="Set_Tabel" EntityType="Self.Set_Tabel" />
+          <EntitySet Name="Status_Tabel" EntityType="Self.Status_Tabel" />
+          <EntitySet Name="StatusWater" EntityType="Self.StatusWater" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="testModelStoreContainer" CdmEntityContainer="testEntities">
+          <EntitySetMapping Name="Control_Tabel">
+            <EntityTypeMapping TypeName="testModel.Control_Tabel">
+              <MappingFragment StoreEntitySet="Control_Tabel">
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="ATemp" ColumnName="ATemp" />
+                <ScalarProperty Name="Aoc" ColumnName="Aoc" />
+                <ScalarProperty Name="Dwind" ColumnName="Dwind" />
+                <ScalarProperty Name="FModel" ColumnName="FModel" />
+                <ScalarProperty Name="HElec" ColumnName="HElec" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="randomid" ColumnName="randomid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Set_Tabel">
+            <EntityTypeMapping TypeName="testModel.Set_Tabel">
+              <MappingFragment StoreEntitySet="Set_Tabel">
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="DeviceAddress" ColumnName="DeviceAddress" />
+                <ScalarProperty Name="DevicePort" ColumnName="DevicePort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status_Tabel">
+            <EntityTypeMapping TypeName="testModel.Status_Tabel">
+              <MappingFragment StoreEntitySet="Status_Tabel">
+                <ScalarProperty Name="DeviceAddress" ColumnName="DeviceAddress" />
+                <ScalarProperty Name="ATemp" ColumnName="ATemp" />
+                <ScalarProperty Name="Aoc" ColumnName="Aoc" />
+                <ScalarProperty Name="Dwind" ColumnName="Dwind" />
+                <ScalarProperty Name="FModel" ColumnName="FModel" />
+                <ScalarProperty Name="HElec" ColumnName="HElec" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Aoctime" ColumnName="Aoctime" />
+                <ScalarProperty Name="eTemp" ColumnName="eTemp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatusWater">
+            <EntityTypeMapping TypeName="testModel.StatusWater">
+              <MappingFragment StoreEntitySet="StatusWater">
+                <ScalarProperty Name="DeviceAddress" ColumnName="DeviceAddress" />
+                <ScalarProperty Name="ATemp" ColumnName="ATemp" />
+                <ScalarProperty Name="Aoc" ColumnName="Aoc" />
+                <ScalarProperty Name="Dwind" ColumnName="Dwind" />
+                <ScalarProperty Name="FModel" ColumnName="FModel" />
+                <ScalarProperty Name="HElec" ColumnName="HElec" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="eTemp" ColumnName="eTemp" />
+                <ScalarProperty Name="Aoctime" ColumnName="Aoctime" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
