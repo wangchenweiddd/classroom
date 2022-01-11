@@ -1,8 +1,7 @@
 export default {
   method: 'get',
   // 基础url前缀
-  // baseURL: 'http://172.23.5.105:9081/hpc',
-  baseURL: 'http://172.23.15.49:8088',
+  baseURL: 
   // 请求头信息
   headers: {
     'Content-Type':'application/json;charset=UTF-8'
